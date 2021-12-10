@@ -14,7 +14,7 @@ spec:
         app: flask-server
     spec:
       containers:
-      - image: registry.hub.docker.com/r/mariadbashutoshkulkarni/test:latest
+      - image: mariadbashutoshkulkarni/test:latest 
         name: flask-server
         ports:
         - containerPort: 80

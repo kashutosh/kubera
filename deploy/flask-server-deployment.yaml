@@ -17,6 +17,6 @@ spec:
       - image: mariadbashutoshkulkarni/test:latest 
         name: flask-server
         ports:
-        - containerPort: 80
+        - containerPort: 5000
 
 

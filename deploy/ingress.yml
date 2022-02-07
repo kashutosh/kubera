@@ -4,15 +4,19 @@ metadata:
   name: kubera-ingress
   namespace: kubera4
 spec:
+  ingressClassName: nginx
   rules:
     - host: myinternaldomainname.com
       http:
         paths:
-          - path: /*
-            pathType: ImplementationSpecific
+          - path: /
+            pathType: Prefix
             backend:
               service:
                 name: flask-server
                 port:
                   number: 5000
-
+status:
+  loadBalancer:
+    ingress:
+    - hostname: localhost
